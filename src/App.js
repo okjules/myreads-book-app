@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 
+import './App.css';
 import BookShelf from './BookShelf'
 import BookSearch from './BookSearch'
-import './App.css';
 
 class BooksApp extends Component {
   state = {
-    books: []
+    books: [],
+    searchedBooks: [],
+    query: ""
   }
 
   componentDidMount() {
@@ -21,7 +23,9 @@ class BooksApp extends Component {
     BooksAPI.update(book, shelf).then(() => {
       book.shelf = shelf
       this.setState(previousState => ({
-        books: previousState.books.filter(b=> b.id !== book.id).concat([book])
+        books: previousState.books
+               .filter(b=> b.id !== book.id)
+               .concat([book])
       }))
     });
   }
