@@ -22,4 +22,4 @@ Project for Udacity Nanodegree course based on starter code by Udacity. The app 
 
 - All React components can be found in the src-folder
 
-- Main React functionality can be manipulated at App.js, Book.js, BookSearch.js and BookShelf.js
+- Main React functionality can be manipulated at `App.js`, `Book.js`, `BookSearch.js` and `BookShelf.js`
