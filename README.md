@@ -1,4 +1,4 @@
-# MyReads React Project by Udacity
+# MyReads React Project for Udacity
 
 ## About
 
