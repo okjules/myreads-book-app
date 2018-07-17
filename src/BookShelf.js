@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 class BookShelf extends Component {
   static propTypes = {
     books: PropTypes.array.isRequired,
-    moveBook: PropTypes.func.isRequired
+    changeBook: PropTypes.func.isRequired
   }
 
   booksOnShelf(shelf) {
@@ -15,7 +15,7 @@ class BookShelf extends Component {
   }
 
   onSwitchShelf(book, shelf) {
-    this.props.moveBook(book, shelf)
+    this.props.changeBook(book, shelf)
   }
 
   render() {
